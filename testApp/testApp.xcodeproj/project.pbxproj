@@ -21,6 +21,11 @@
 		5766E9E0181EB19D008BA3F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5766E9C2181EB19D008BA3F2 /* UIKit.framework */; };
 		5766E9E8181EB19D008BA3F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5766E9E6181EB19D008BA3F2 /* InfoPlist.strings */; };
 		5766E9EA181EB19D008BA3F2 /* testAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766E9E9181EB19D008BA3F2 /* testAppTests.m */; };
+		5766E9FB1820A38F008BA3F2 /* cameraFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766E9FA1820A38F008BA3F2 /* cameraFactory.m */; };
+		5766E9FE1820C3FD008BA3F2 /* baseCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766E9FD1820C3FD008BA3F2 /* baseCamera.m */; };
+		5766EA041820C473008BA3F2 /* fourCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766EA031820C473008BA3F2 /* fourCamera.m */; };
+		5766EA071820C495008BA3F2 /* eightCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766EA061820C495008BA3F2 /* eightCamera.m */; };
+		5766EA0A1820C4AD008BA3F2 /* sixteenCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 5766EA091820C4AD008BA3F2 /* sixteenCamera.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		5766E9E5181EB19D008BA3F2 /* testAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testAppTests-Info.plist"; sourceTree = "<group>"; };
 		5766E9E7181EB19D008BA3F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5766E9E9181EB19D008BA3F2 /* testAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testAppTests.m; sourceTree = "<group>"; };
+		5766E9F91820A38F008BA3F2 /* cameraFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraFactory.h; sourceTree = "<group>"; };
+		5766E9FA1820A38F008BA3F2 /* cameraFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraFactory.m; sourceTree = "<group>"; };
+		5766E9FC1820C3FD008BA3F2 /* baseCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseCamera.h; sourceTree = "<group>"; };
+		5766E9FD1820C3FD008BA3F2 /* baseCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseCamera.m; sourceTree = "<group>"; };
+		5766EA021820C473008BA3F2 /* fourCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourCamera.h; sourceTree = "<group>"; };
+		5766EA031820C473008BA3F2 /* fourCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourCamera.m; sourceTree = "<group>"; };
+		5766EA051820C495008BA3F2 /* eightCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eightCamera.h; sourceTree = "<group>"; };
+		5766EA061820C495008BA3F2 /* eightCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eightCamera.m; sourceTree = "<group>"; };
+		5766EA081820C4AD008BA3F2 /* sixteenCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sixteenCamera.h; sourceTree = "<group>"; };
+		5766EA091820C4AD008BA3F2 /* sixteenCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sixteenCamera.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,16 @@
 				5766E9D4181EB19D008BA3F2 /* ViewController.m */,
 				5766E9D6181EB19D008BA3F2 /* Images.xcassets */,
 				5766E9C5181EB19D008BA3F2 /* Supporting Files */,
+				5766E9F91820A38F008BA3F2 /* cameraFactory.h */,
+				5766E9FA1820A38F008BA3F2 /* cameraFactory.m */,
+				5766E9FC1820C3FD008BA3F2 /* baseCamera.h */,
+				5766E9FD1820C3FD008BA3F2 /* baseCamera.m */,
+				5766EA021820C473008BA3F2 /* fourCamera.h */,
+				5766EA031820C473008BA3F2 /* fourCamera.m */,
+				5766EA051820C495008BA3F2 /* eightCamera.h */,
+				5766EA061820C495008BA3F2 /* eightCamera.m */,
+				5766EA081820C4AD008BA3F2 /* sixteenCamera.h */,
+				5766EA091820C4AD008BA3F2 /* sixteenCamera.m */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -250,8 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5766E9D5181EB19D008BA3F2 /* ViewController.m in Sources */,
+				5766EA071820C495008BA3F2 /* eightCamera.m in Sources */,
 				5766E9CF181EB19D008BA3F2 /* AppDelegate.m in Sources */,
+				5766EA0A1820C4AD008BA3F2 /* sixteenCamera.m in Sources */,
 				5766E9CB181EB19D008BA3F2 /* main.m in Sources */,
+				5766E9FE1820C3FD008BA3F2 /* baseCamera.m in Sources */,
+				5766EA041820C473008BA3F2 /* fourCamera.m in Sources */,
+				5766E9FB1820A38F008BA3F2 /* cameraFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

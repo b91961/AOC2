@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class cameraFactory;
 @interface ViewController : UIViewController
+
+{
+    UILabel *headerLabel;
+    UILabel *textLabel;
+    
+    cameraFactory *CameraFactory;
+}
 
 @end
