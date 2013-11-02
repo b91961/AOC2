@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cameraFactory.h"
 
 @interface cameraFactory : NSObject
+
 
 {
     // Variables
 @public
-    int repairTime;
+    int empAmount;
     
-    float screenSize;
+    float areaLaborCost;
     
-    BOOL crackedScreen;
+    NSString *sysType;
     
     NSString *text;
     

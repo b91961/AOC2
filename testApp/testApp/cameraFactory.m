@@ -16,9 +16,9 @@
     if (self != nil)
     {
         // any init for this object
-        repairTime = 1;
-        screenSize = 4.5f;
-        crackedScreen = YES;
+        empAmount = 2;
+        areaLaborCost = 15.50f;
+        sysType = @"4 Channel";
     }
     
     return self;
@@ -26,7 +26,7 @@
 
 -(NSString*)getText;
 {
-    text = [NSString stringWithFormat:@"Cameras = %d, Installers = %f", repairTime, screenSize];
+    text = [NSString stringWithFormat:@"Employees needed = %d, Hourly rate for each employee = %f", empAmount, areaLaborCost];
     if (text != nil)
     {
         return text;
