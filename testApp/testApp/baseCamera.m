@@ -10,4 +10,18 @@
 
 @implementation baseCamera
 
+@synthesize numEmp;
+@synthesize sysType;
+@synthesize laborCost;
+
+-(id)init {
+    self = [super init];
+    if(self !=nil) {
+        numEmp = 0;
+        [self setSysType:nil];
+        [self setLaborCost:0];
+    }
+    return self;
+}
+
 @end

@@ -7,24 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cameraFactory.h"
+#import "baseCamera.h"
+#import "fourCamera.h"
+#import "eightCamera.h"
+#import "sixteenCamera.h"
 
 @interface cameraFactory : NSObject
 
 
-{
-    // Variables
-@public
-    int empAmount;
-    
-    float areaLaborCost;
-    
-    NSString *sysType;
-    
-    NSString *text;
-    
-}
-
--(NSString*)getText;
++(baseCamera *)cctvSpecs: (int)camType;
 
 @end

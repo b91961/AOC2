@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 #import "CameraFactory.h"
+#import "baseCamera.h"
+#import "fourCamera.h"
+#import "eightCamera.h"
+#import "sixteenCamera.h"
 
 @interface ViewController ()
 
@@ -29,105 +33,106 @@
     [self.view addSubview:headerLabel];
     
     // Add a bottomBorder
-    headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 55.0f, 320.0f, 1.0f)];
-    headerLabel.backgroundColor = [UIColor darkGrayColor];
-    [self.view addSubview:headerLabel];
+    headerLabelBorder = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 55.0f, 320.0f, 1.0f)];
+    headerLabelBorder.backgroundColor = [UIColor darkGrayColor];
+    [self.view addSubview:headerLabelBorder];
+    
+    FourCamera = [[fourCamera alloc] init];
+    if (FourCamera == nil)
+    {
+        
+    }
     
     // 4 channel Camera Install Label
-    headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 60.0f, 300.0f, 35.0f)];
-    headerLabel.backgroundColor = [UIColor colorWithRed:0.616 green:0.906 blue:0.227 alpha:1];
-    headerLabel.text = @"4 Channel CCTV";
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:headerLabel];
-    
-    CameraFactory = [[cameraFactory alloc] init];
-    if (CameraFactory == nil)
-    {
-        
-    }
+    fourHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 60.0f, 300.0f, 35.0f)];
+    fourHeaderLabel.backgroundColor = [UIColor colorWithRed:0.616 green:0.906 blue:0.227 alpha:1];
+    fourHeaderLabel.text = [FourCamera fourChannelSystem];
+    fourHeaderLabel.textColor = [UIColor whiteColor];
+    fourHeaderLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:fourHeaderLabel];
     
     // 4 channel # of employees
-    textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 95.0f, 300.0f, 35.0f)];
-    textLabel.text = [CameraFactory getText];
-    textLabel.numberOfLines = 2;
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.backgroundColor = [UIColor whiteColor];
-    textLabel.textColor = [UIColor darkGrayColor];
-    [self.view addSubview:textLabel];
+    fourChannelLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 95.0f, 300.0f, 35.0f)];
+    fourChannelLabel.text = [FourCamera fourChannelEmp];
+    fourChannelLabel.numberOfLines = 2;
+    fourChannelLabel.textAlignment = NSTextAlignmentCenter;
+    fourChannelLabel.backgroundColor = [UIColor whiteColor];
+    fourChannelLabel.textColor = [UIColor darkGrayColor];
+    [self.view addSubview:fourChannelLabel];
     
     // 4 channel cost of labor
-    textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 35.0f)];
-    textLabel.text = @"4 channel cost of labor";
-    textLabel.numberOfLines = 2;
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.backgroundColor = [UIColor whiteColor];
-    textLabel.textColor = [UIColor darkGrayColor];
-    [self.view addSubview:textLabel];
+    fourLaborLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 35.0f)];
+    fourLaborLabel.text = [FourCamera fourChannelLabor];
+    fourLaborLabel.numberOfLines = 2;
+    fourLaborLabel.textAlignment = NSTextAlignmentCenter;
+    fourLaborLabel.backgroundColor = [UIColor whiteColor];
+    fourLaborLabel.textColor = [UIColor darkGrayColor];
+    [self.view addSubview:fourLaborLabel];
+    
+    EightCamera = [[eightCamera alloc] init];
+    if (EightCamera != nil)
+    {
+        
+    }
     
     // 8 channel Camera Install Label
-    headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 170.0f, 300.0f, 35.0f)];
-    headerLabel.backgroundColor = [UIColor colorWithRed:0.616 green:0.906 blue:0.227 alpha:1];
-    headerLabel.text = @"8 Channel CCTV";
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:headerLabel];
-    
-    CameraFactory = [[cameraFactory alloc] init];
-    if (CameraFactory != nil)
-    {
-        
-    }
+    eightHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 170.0f, 300.0f, 35.0f)];
+    eightHeaderLabel.backgroundColor = [UIColor colorWithRed:0.616 green:0.906 blue:0.227 alpha:1];
+    eightHeaderLabel.text = [EightCamera eightChannelSystem];
+    eightHeaderLabel.textColor = [UIColor whiteColor];
+    eightHeaderLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:eightHeaderLabel];
+
     
     // 8 channel # of employees
-    textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 205.0f, 300.0f, 35.0f)];
-    textLabel.text = [CameraFactory getText];
-    textLabel.numberOfLines = 2;
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.backgroundColor = [UIColor whiteColor];
-    textLabel.textColor = [UIColor darkGrayColor];
-    [self.view addSubview:textLabel];
+    eightChannelLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 205.0f, 300.0f, 35.0f)];
+    eightChannelLabel.text = [EightCamera eightChannelEmp];
+    eightChannelLabel.numberOfLines = 2;
+    eightChannelLabel.textAlignment = NSTextAlignmentCenter;
+    eightChannelLabel.backgroundColor = [UIColor whiteColor];
+    eightChannelLabel.textColor = [UIColor darkGrayColor];
+    [self.view addSubview:eightChannelLabel];
     
     // 8 channel cost of labor
-    textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 240.0f, 300.0f, 35.0f)];
-    textLabel.text = @"8 channel cost of labor";
-    textLabel.numberOfLines = 2;
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.backgroundColor = [UIColor whiteColor];
-    textLabel.textColor = [UIColor darkGrayColor];
-    [self.view addSubview:textLabel];
+    eightLaborLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 240.0f, 300.0f, 35.0f)];
+    eightLaborLabel.text = [EightCamera eightChannelLabor];
+    eightLaborLabel.numberOfLines = 2;
+    eightLaborLabel.textAlignment = NSTextAlignmentCenter;
+    eightLaborLabel.backgroundColor = [UIColor whiteColor];
+    eightLaborLabel.textColor = [UIColor darkGrayColor];
+    [self.view addSubview:eightLaborLabel];
     
-    // 16 channel Camera Install Label
-    headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 280.0f, 300.0f, 35.0f)];
-    headerLabel.backgroundColor = [UIColor colorWithRed:0.616 green:0.906 blue:0.227 alpha:1];
-    headerLabel.text = @"16 Channel CCTV";
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:headerLabel];
-    
-    CameraFactory = [[cameraFactory alloc] init];
-    if (CameraFactory != nil)
+    SixteenCamera = [[sixteenCamera alloc] init];
+    if (SixteenCamera != nil)
     {
         
     }
     
+    // 16 channel Camera Install Label
+    sixteenHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 280.0f, 300.0f, 35.0f)];
+    sixteenHeaderLabel.backgroundColor = [UIColor colorWithRed:0.616 green:0.906 blue:0.227 alpha:1];
+    sixteenHeaderLabel.text = [SixteenCamera sixteenChannelSystem];
+    sixteenHeaderLabel.textColor = [UIColor whiteColor];
+    sixteenHeaderLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:sixteenHeaderLabel];
+    
     // 16 channel # of employees
-    textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 315.0f, 300.0f, 35.0f)];
-    textLabel.text = [CameraFactory getText];
-    textLabel.numberOfLines = 2;
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.backgroundColor = [UIColor whiteColor];
-    textLabel.textColor = [UIColor darkGrayColor];
-    [self.view addSubview:textLabel];
+    sixteenChannelLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 315.0f, 300.0f, 35.0f)];
+    sixteenChannelLabel.text = [SixteenCamera sixteenChannelEmp];
+    sixteenChannelLabel.numberOfLines = 2;
+    sixteenChannelLabel.textAlignment = NSTextAlignmentCenter;
+    sixteenChannelLabel.backgroundColor = [UIColor whiteColor];
+    sixteenChannelLabel.textColor = [UIColor darkGrayColor];
+    [self.view addSubview:sixteenChannelLabel];
     
     // 16 channel cost of labor
-    textLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 350.0f, 300.0f, 35.0f)];
-    textLabel.text = @"16 channel cost of labor";
-    textLabel.numberOfLines = 2;
-    textLabel.textAlignment = NSTextAlignmentCenter;
-    textLabel.backgroundColor = [UIColor whiteColor];
-    textLabel.textColor = [UIColor darkGrayColor];
-    [self.view addSubview:textLabel];
+    sixteenLaborLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 350.0f, 300.0f, 35.0f)];
+    sixteenLaborLabel.text = [SixteenCamera sixteenChannelLabor];
+    sixteenLaborLabel.numberOfLines = 2;
+    sixteenLaborLabel.textAlignment = NSTextAlignmentCenter;
+    sixteenLaborLabel.backgroundColor = [UIColor whiteColor];
+    sixteenLaborLabel.textColor = [UIColor darkGrayColor];
+    [self.view addSubview:sixteenLaborLabel];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

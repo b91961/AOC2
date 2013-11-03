@@ -10,27 +10,15 @@
 
 @implementation cameraFactory
 
--(id)init
-{
-    self = [super init];
-    if (self != nil)
-    {
-        // any init for this object
-        empAmount = 2;
-        areaLaborCost = 15.50f;
-        sysType = @"4 Channel";
-    }
-    
-    return self;
++(baseCamera *)cctvSpecs: (int)camType {
+    if(camType == fourCctv) {
+        return [[fourCamera alloc] init];
+    } else if(camType == eightCctv) {
+        return [[eightCamera alloc] init];
+    } else if(camType == sixteenCctv) {
+        return [[sixteenCamera alloc] init];
+    } else return nil;
 }
 
--(NSString*)getText;
-{
-    text = [NSString stringWithFormat:@"Employees needed = %d, Hourly rate for each employee = %f", empAmount, areaLaborCost];
-    if (text != nil)
-    {
-        return text;
-    }
-    return nil;
-}
+
 @end

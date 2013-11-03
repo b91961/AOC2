@@ -9,13 +9,30 @@
 #import <UIKit/UIKit.h>
 
 @class cameraFactory;
+@class baseCamera;
+@class fourCamera;
+@class eightCamera;
+@class sixteenCamera;
 @interface ViewController : UIViewController
 
 {
     UILabel *headerLabel;
+    UILabel *headerLabelBorder;
     UILabel *textLabel;
+    UILabel *fourChannelLabel;
+    UILabel *fourLaborLabel;
+    UILabel *fourHeaderLabel;
+    UILabel *eightHeaderLabel;
+    UILabel *eightChannelLabel;
+    UILabel *eightLaborLabel;
+    UILabel *sixteenHeaderLabel;
+    UILabel *sixteenChannelLabel;
+    UILabel *sixteenLaborLabel;
     
     cameraFactory *CameraFactory;
+    fourCamera *FourCamera;
+    eightCamera *EightCamera;
+    sixteenCamera *SixteenCamera;
 }
 
 @end

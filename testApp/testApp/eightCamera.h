@@ -10,4 +10,21 @@
 
 @interface eightCamera : NSObject
 
+{
+    // Variables
+@public
+    int empAmount;
+    
+    float areaLaborCost;
+    
+    NSString *sysType;
+    
+    NSString *text;
+    
+}
+
+-(NSString*)eightChannelEmp;
+-(NSString*)eightChannelLabor;
+-(NSString*)eightChannelSystem;
+
 @end

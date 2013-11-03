@@ -10,4 +10,21 @@
 
 @interface fourCamera : NSObject
 
+{
+    // Variables
+@public
+    int empAmount;
+    
+    float areaLaborCost;
+    
+    NSString *sysType;
+    
+    NSString *text;
+    
+}
+
+-(NSString*)fourChannelEmp;
+-(NSString*)fourChannelLabor;
+-(NSString*)fourChannelSystem;
+
 @end

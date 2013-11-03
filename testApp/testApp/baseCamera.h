@@ -10,4 +10,24 @@
 
 @interface baseCamera : NSObject
 
+{
+    int camEnum;
+}
+
+typedef enum {
+    fourCctv,
+    eightCctv,
+    sixteenCctv
+} camEnum;
+
+@property int numEmp;
+@property (nonatomic, retain) NSString *sysType;
+@property float laborCost;
+
+-(id)init;
+
+-(NSString*)typeOfSystem;
+
+-(NSString*)calcTotalLabor;
+
 @end

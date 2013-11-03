@@ -10,4 +10,21 @@
 
 @interface sixteenCamera : NSObject
 
+{
+    // Variables
+@public
+    int empAmount;
+    
+    float areaLaborCost;
+    
+    NSString *sysType;
+    
+    NSString *text;
+    
+}
+
+-(NSString*)sixteenChannelEmp;
+-(NSString*)sixteenChannelLabor;
+-(NSString*)sixteenChannelSystem;
+
 @end
