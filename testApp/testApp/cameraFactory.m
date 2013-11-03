@@ -7,6 +7,10 @@
 //
 
 #import "cameraFactory.h"
+#import "baseCamera.h"
+#import "fourCamera.h"
+#import "eightCamera.h"
+#import "sixteenCamera.h"
 
 @implementation cameraFactory
 

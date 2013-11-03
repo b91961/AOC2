@@ -17,7 +17,7 @@
 -(id)init {
     self = [super init];
     if(self !=nil) {
-        empAmount = 2;
+        empAmount = 0;
         [self setSysType:nil];
         [self setAreaLaborCost:15.50f];
     }

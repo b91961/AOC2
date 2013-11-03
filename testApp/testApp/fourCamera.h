@@ -6,22 +6,13 @@
 //  Copyright (c) 2013 Jamal Moubarak. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "baseCamera.h"
 
-@interface fourCamera : NSObject
+@interface fourCamera : baseCamera
 
-{
-    // Variables
-@public
-    int empAmount;
-    
-    float areaLaborCost;
-    
-    NSString *sysType;
-    
-    NSString *text;
-    
-}
+@property int hoursPerEmp;
+@property int totalLaborCost;
+@property int empAmount;
 
 -(NSString*)fourChannelEmp;
 -(NSString*)fourChannelLabor;

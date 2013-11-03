@@ -10,48 +10,39 @@
 
 @implementation sixteenCamera
 
--(id)init
-{
+@synthesize hoursPerEmp;
+@synthesize totalLaborCost;
+@synthesize empAmount;
+
+-(id)init {
     self = [super init];
-    if (self != nil)
-    {
-        // any init for this object
-        empAmount = 6;
-        areaLaborCost = 744.50f;
-        sysType = @"16 Channel CCTV";
+    if(self !=nil) {
+        [self setEmpAmount:6];
+        [self setHoursPerEmp:8];
+        [self setSysType:@"16 Channel CCTV"];
+        [self setAreaLaborCost:0];
+        [self setTotalLaborCost:15.50f];
     }
-    
     return self;
+};
+
+-(NSString*) sixteenChannelSystem {
+    NSString *channelSystem = [[NSString alloc] init];
+    channelSystem = [NSString stringWithFormat:@"%@", self.sysType];
+    return channelSystem;
 }
 
--(NSString*)sixteenChannelEmp;
-{
-    text = [NSString stringWithFormat:@"Employees needed = %d", empAmount];
-    if (text != nil)
-    {
-        return text;
-    }
-    return nil;
+-(NSString*) sixteenChannelEmp {
+    NSString *channelEmp = [[NSString alloc] init];
+    channelEmp = [NSString stringWithFormat:@"Employees needed = %d", self.empAmount];
+    return channelEmp;
 }
 
--(NSString*)sixteenChannelLabor;
-{
-    text = [NSString stringWithFormat:@"Total labor cost = $%.02f", areaLaborCost];
-    if (text != nil)
-    {
-        return text;
-    }
-    return nil;
-}
-
--(NSString*)sixteenChannelSystem;
-{
-    text = [NSString stringWithFormat:@"%@", sysType];
-    if (text != nil)
-    {
-        return text;
-    }
-    return nil;
+-(NSString*) sixteenChannelLabor {
+    [self setAreaLaborCost:((empAmount * hoursPerEmp) * totalLaborCost)];
+    NSString *channelLabor = [[NSString alloc] init];
+    channelLabor = [NSString stringWithFormat:@"Total labor cost = $%.02f", self.areaLaborCost];
+    return channelLabor;
 }
 
 @end
