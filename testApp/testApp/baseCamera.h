@@ -20,14 +20,16 @@ typedef enum {
     sixteenCctv
 } camEnum;
 
-@property int numEmp;
+@property int empAmount;
 @property (nonatomic, retain) NSString *sysType;
-@property float laborCost;
+@property float areaLaborCost;
 
 -(id)init;
 
--(NSString*)typeOfSystem;
+-(NSString*)channelSystem;
 
--(NSString*)calcTotalLabor;
+-(NSString*)channelEmp;
+
+-(NSString*)channelLabor;
 
 @end

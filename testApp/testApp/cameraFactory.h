@@ -15,6 +15,6 @@
 @interface cameraFactory : NSObject
 
 
-+(baseCamera *)cctvSpecs: (int)camType;
++(baseCamera*)cctvSpecs: (int)camType;
 
 @end
